@@ -1,0 +1,36 @@
+<div class="container-fluid">
+    <h1> <span class="badge badge-secondary">Get customer's details by ID</span></h1>
+    <br>
+    <br>
+    <br>
+    <h4> <span class="badge badge-secondary">Please fill in the blank row</span></h4>
+    <br>
+    <form>
+      <div class="form-group col-md-6" >
+        <label for="inputName"><h5>id:</h5></label>
+        <input type="number" class="form-control" placeholder="0" [(ngModel)]="customerid" name="idnum">
+      </div>
+      <div *ngIf="show">
+          <form>
+              <fieldset *ngIf="show" disabled>
+                <div class="form-group col-md-6" >
+                  <label for="disabledTextInput">name:</label>
+                  <input type="text" id="disabledTextInput" class="form-control" placeholder="{{_custsrv.customer.name}}">
+                </div>
+                <div class="form-group col-md-6" >
+                    <label for="disabledTextInput">password:</label>
+                    <input type="text" id="disabledTextInput" class="form-control" placeholder="{{_custsrv.customer.password}}">
+                  </div>
+
+  
+              </fieldset>
+            </form>
+          </div>
+      <br>
+      <br>
+      <button (click)="_custsrv.getcustomer(customerid); show=true" class="btn btn-primary">Get!</button>
+    </form>
+        <div>
+        
+        </div>
+  </div>

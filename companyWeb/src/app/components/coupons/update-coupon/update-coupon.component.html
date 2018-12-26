@@ -1,0 +1,65 @@
+<div class="container-fluid">
+  <h1> <span class="badge badge-secondary">Get coupon's details by ID, and than Update it.</span></h1>
+  <br>
+  <br>
+  <br>
+  <h4> <span class="badge badge-secondary">Please fill in the blank row</span></h4>
+  <br>
+  <form>
+    <div class="form-group col-md-6" >
+      <label for="inputName"><h5>Id:</h5></label>
+      <input type="number" class="form-control"   name="idnum" [(ngModel)]="coupon2.id" id="idn">
+    </div>
+    <div >
+        <!-- *ngIf="show" -->
+        <form *ngIf="show">
+            <fieldset >
+      <div class="form-group col-md-6" >
+         <label for="inputName">Title:</label>
+         <input type="text" class="form-control"  name="titletxt" [(ngModel)]="coupon2.title" disabled>
+      </div>
+      <div class="form-group col-md-6" >
+         <label for="inputName">Start_date:</label>
+         <input type="date" class="form-control"  name="start_datetxt" [(ngModel)]="coupon2.start_date" disabled>
+      </div>
+      <div class="form-group col-md-6" >
+         <label for="inputName">End_date:</label>
+         <input type="date" class="form-control"  name="end_datetxt" [(ngModel)]="coupon2.end_date">
+     </div>
+     <div class="form-group col-md-6" >
+      <label for="inputName">Amount:</label>
+      <input type="number" class="form-control"  name="amounttxt" [(ngModel)]="coupon2.amount" disabled>
+     </div>
+     <div class="form-group col-md-6" >
+      <label for="inputName">Type:</label>
+      <input type="any" class="form-control"  name="typetxt" [(ngModel)]="coupon2.type" disabled>
+     </div>
+     <div class="form-group col-md-6" >
+      <label for="inputName">Massage:</label>
+      <input type="text" class="form-control"  name="massagetxt" [(ngModel)]="coupon2.massage" disabled>
+     </div>
+     <div class="form-group col-md-6" >
+      <label for="inputName">Price:</label>
+      <input type="number" class="form-control"  name="pricetxt" [(ngModel)]="coupon2.price" >
+     </div>
+     <div class="form-group col-md-6" >
+      <label for="inputName">Image:</label>
+      <input type="text" class="form-control"  name="imagetxt" [(ngModel)]="coupon2.image" disabled>
+      <div *ngIf="_coupserv.coupon.image.length > 0">
+        <img src="{{_coupserv.coupon.image}}" alt="Responsive image" class="img-thumbnail">
+      </div>
+    </div>
+
+
+            </fieldset>
+          </form>
+        </div>
+    <br>
+    <br>
+    <button (click)="getcoup(); show=true;" class="btn btn-primary">Get!</button>&nbsp;&nbsp;&nbsp;&nbsp;
+    <button *ngIf="show" (click)="updatecoup();" class="btn btn-primary">Update!</button>
+  </form>
+      <div>
+      
+      </div>
+</div>

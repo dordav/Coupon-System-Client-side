@@ -1,0 +1,39 @@
+
+<div class="container" >
+    
+  <div id="rtl-container" dir="rtl">
+  <h3><button (click)="_coupserv.swal1()" style="margin-left:95%" class="fa fa-shopping-cart"></button></h3>
+</div>
+<!-- <h3><button (click)="_coupserv.routnav()" style="margin-left:95%" class="fa fa-shopping-cart"></button></h3> -->
+<!-- <h3><a  routerLink="../ShoppingCartComponent" style="margin-left:95%" class="fa fa-shopping-cart"></a></h3> -->
+
+                  <div class="row" >
+                    
+                    <div class="col-md-4" *ngFor="let coup of _coupserv.coupons; let i = index" >
+                        <br><br>
+                        <div class="zoom">
+                        <div class="card" style="width: 18rem;" >
+                            <img class="card-img-top" src="{{coup.image}}" alt="Card image cap">
+                            <div class="card-body">
+                              <h5 class="card-title">Title: {{coup.title}}</h5>
+                            </div>
+                            <ul class="list-group list-group-flush">
+                              
+                              <li class="list-group-item">Price: {{coup.price}}</li>
+                              <li class="list-group-item">End datend: {{coup.end_date}}</li>
+                              
+                            </ul>
+                            <div class="card-body">
+                              <button (click)="_coupserv.gotopayment(i)" class="btn btn-sm btn-outline-secondary">Purchase coupon</button>
+                              
+                              <button (click)="_coupserv.addtocart(i)" class="btn btn-sm btn-outline-secondary">Add to cart</button>
+                              
+                              <!-- <a href="#" class="card-link">Another link</a> -->
+                            </div>
+                          </div>
+                          </div>
+                    </div>
+                    
+                  </div>
+                </div>
+    

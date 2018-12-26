@@ -1,0 +1,86 @@
+<div class="accordion" id="accordionExample">
+  <div class="card">
+    <div class="card-header" id="headingOne">
+      <h5 class="mb-0">
+        <button (click)="_custServ.getallpurchasedcoupons()"class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+          Get all purchased coupons
+        </button>
+      </h5>
+    </div>
+
+  </div>
+  <div class="card">
+    <div class="card-header" id="headingTwo">
+      <h5 class="mb-0">
+        <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false"
+          aria-controls="collapseTwo">
+          Get purchased coupons by type
+        </button>
+      </h5>
+    </div>
+    <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionExample">
+      <div class="card-body">
+        <div>
+          <form>
+              <label class="my-1 mr-2" for="inlineFormCustomSelectPref" name="ctype">Type:</label>            
+            <div class="form-row align-items-center">
+              <div class="col-auto my-1">
+                <label class="mr-sm-2 sr-only" for="inlineFormCustomSelect">Preference</label>
+                <select class="custom-select mr-sm-2" id="inlineFormCustomSelect" name="couptype" [(ngModel)]="coupontype">
+                  <option selected>Choose...</option>
+                  <option>food</option>
+                  <option>electricity</option>
+                  <option>hobby</option>
+                  <option>vacation</option>
+                </select>
+              </div>
+            </div>
+            <br><br>
+            <button (click)="_custServ.getpurchasedcouponsbytype(coupontype)" class="btn btn-primary">Get!</button>       
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="card">
+    <div class="card-header" id="headingThree">
+      <h5 class="mb-0">
+        <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false"
+          aria-controls="collapseThree">
+          Get purchased coupons by price
+        </button>
+      </h5>
+    </div>
+    <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordionExample">
+      <div class="card-body">
+        <div>
+          <form>
+            <div class="slidecontainer">
+              <label for="customRange3">Example range</label>
+              <input type="range" class="slider" min="0" max="9000" step="100" id="customRange3" [(ngModel)]="price" value="5000" name="slide">
+              <div>
+                <span>0</span>
+                <span style="margin-left:70%">9000</span>
+              </div>
+            </div>
+          </form>
+          <br>
+          <br>
+          <form>
+            <div class="form-group col-md-6">
+              <label for="inputName">
+                <h5>Price: </h5>
+              </label>
+              <input type="number" name="idnum"  [(ngModel)]="price" placeholder="0">
+            </div>
+            <br>
+            <br>
+            <div>
+              <button (click)="_custServ.getpurchasedcouponsbyprice(price)" class="btn btn-primary">Get!</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

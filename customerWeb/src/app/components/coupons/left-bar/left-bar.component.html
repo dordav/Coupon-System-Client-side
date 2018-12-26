@@ -1,0 +1,19 @@
+<br>
+<div class="container">
+
+    <div class="dropdown">
+        <a class="btn btn-secondary dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          Dropdown link
+        </a>
+      
+        <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+          <a class="dropdown-item" routerLink="GetAllCoupons">Get all coupons</a>
+          <a class="dropdown-item" routerLink="GetAllCouponsByType">Get all coupons by type</a>
+          <a class="dropdown-item" routerLink="GetAllCouponsByPrice">Get all coupons by price</a>
+          
+        </div>
+      </div>
+
+      <router-outlet name="getall"></router-outlet>
+        
+  </div>

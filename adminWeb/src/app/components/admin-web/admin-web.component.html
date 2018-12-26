@@ -1,0 +1,36 @@
+
+<!-- <div *ngIf = "cart.length>0">
+    <h2>My cart: <br></h2>
+  <div *ngFor="let product of cart">
+    <p>name: {{product}}</p>
+  </div>
+</div> -->
+<!-- <h1>Shop</h1>
+<div *ngFor = "let prd of products">
+    <p>product name: {{prd.name}} </p>
+    <p>product price: {{prd.price}} </p>
+    <p>product amount: {{prd["amount"]}}</p>
+    <button (click)='buy(prd)'>buy</button>
+    <hr>
+</div> -->
+<!-- <div class="card" style="width: 18rem;">
+    <div class="card-header">
+      Company
+    </div>
+    <ul class="list-group list-group-flush">
+      <div *ngFor = "let prd of products">
+          <li class="list-group-item">Company name: {{prd.name}}, Company id:{{prd.id}}</li>
+          <li></li>
+      </div>
+
+    </ul>
+  </div> -->
+  <div class="jumbotron">
+      <h1 class="display-4">Hello, Admin!</h1>
+      <p class="lead">This is the main page, here you can choose between company or customer, to get/create/update and delete.</p>
+      <hr class="my-4">
+      <p>You have all the permissions, let's get started with:</p>
+      <a class="btn btn-primary btn-lg" routerLink="/company" role="">Company</a><br>
+      <br>
+      <a class="btn btn-primary btn-lg" routerLink="/customer" role="button">Customer</a>
+    </div>

@@ -1,0 +1,24 @@
+<div class="container">
+
+  <div id="rtl-container" dir="rtl">
+  </div>
+  <div class="row">
+    <div class="col-md-4" *ngFor="let coup of _custserv.coupons; let i = index">
+      <br>
+      <br>
+      <div class="card" style="width: 18rem;" ng-mouseover="expression">
+        <img class="card-img-top" src="{{coup.image}}" alt="Card image cap">
+        <div class="card-body">
+          <h5 class="card-title">Title: {{coup.title}}</h5>
+        </div>
+        <ul class="list-group list-group-flush">
+
+          <li class="list-group-item">Price: {{coup.price}}</li>
+          <li class="list-group-item">End datend: {{coup.end_date}}</li>
+
+        </ul>
+      </div>
+    </div>
+
+  </div>
+</div>

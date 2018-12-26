@@ -1,0 +1,69 @@
+<div class="container-fluid">
+  <h1> <span class="badge badge-secondary">Get coupon's details by ID</span></h1>
+  <br>
+  <br>
+  <br>
+  <h4> <span class="badge badge-secondary">Please fill in the blank row</span></h4>
+  <br>
+  <form>
+    <div class="form-group col-md-6">
+      <label for="inputName">
+        <h5>id:</h5>
+      </label>
+      <input type="number" class="form-control" value="55" [(ngModel)]="couponid" name="idnum" [(ngModel)]="coupon2.id"
+        placeholder="{{coupon.id}}">
+    </div>
+    <div *ngIf="show">
+      <form>
+        <div>
+        </div>
+        <fieldset *ngIf="show" disabled>
+          <div class="form-group col-md-6">
+            <label for="disabledTextInput">Title:</label>
+            <input type="text" id="disabledTextInput" class="form-control" placeholder="{{_coupserv.coupon.title}}">
+          </div>
+          <div class="form-group col-md-6">
+            <label for="disabledTextInput">Start date:</label>
+            <input type="text" id="disabledTextInput" class="form-control" placeholder="{{_coupserv.coupon.start_date}}">
+          </div>
+          <div class="form-group col-md-6">
+            <label for="disabledTextInput">End date:</label>
+            <input type="text" id="disabledTextInput" class="form-control" placeholder="{{_coupserv.coupon.end_date}}">
+          </div>
+          <div class="form-group col-md-6">
+            <label for="disabledTextInput">Amount:</label>
+            <input type="number" id="disabledTextInput" class="form-control" placeholder="{{_coupserv.coupon.amount}}">
+          </div>
+          <div class="form-group col-md-6">
+            <label for="disabledTextInput">Type:</label>
+            <input type="text" id="disabledTextInput" class="form-control" placeholder="{{_coupserv.coupon.type}}">
+          </div>
+          <div class="form-group col-md-6">
+            <label for="disabledTextInput">Massage:</label>
+            <input type="text" id="disabledTextInput" class="form-control" placeholder="{{_coupserv.coupon.massage}}">
+          </div>
+          <div class="form-group col-md-6">
+            <label for="disabledTextInput">Price:</label>
+            <input type="number" id="disabledTextInput" class="form-control" placeholder="{{_coupserv.coupon.price}}">
+          </div>
+          <div class="form-group col-md-6">
+            <label for="disabledTextInput">Image:</label>
+            <input type="text" id="disabledTextInput" class="form-control" placeholder="{{_coupserv.coupon.image}}">
+            <div *ngIf="_coupserv.coupon.image.length > 0">
+                <img src="{{_coupserv.coupon.image}}" alt="Responsive image" class="img-thumbnail">
+              </div>
+          </div>
+
+
+        </fieldset>
+      </form>
+    </div>
+    <br>
+    <br>
+    <!-- <button (click)="getcoup(); show=true" class="btn btn-primary">Get!</button> -->
+    <button (click)=" show=true; _coupserv.getcoupon1(couponid)" class="btn btn-primary">Get!</button>
+  </form>
+  <div>
+
+  </div>
+</div>

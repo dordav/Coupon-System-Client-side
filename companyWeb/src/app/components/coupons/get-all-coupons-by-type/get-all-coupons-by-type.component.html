@@ -1,0 +1,55 @@
+<div class="container-fluid">
+  <h1> <span class="badge badge-secondary">Get coupons by category</span></h1>
+  <br>
+  <br>
+  <br>
+  <h4> <span class="badge badge-secondary">Please choose one of the category and press "Get!"</span></h4>
+  <br>
+  <form>
+    <div class="form-group col-md-6" >
+      <label for="inputName"><h5>Type:</h5></label>
+      <div class="form-group col-md-4">      
+        <select id="inputState" class="form-control" [(ngModel)]="coupon.type" name="idnum">
+          <option>food</option>
+          <option>electricity</option>
+          <option>hobby</option>
+          <option>vacation</option>
+        </select>
+      </div>
+    </div>
+      <br>
+      <br>
+      <div>
+      <button (click)="getallcoupbytype(); show=true" class="btn btn-primary">Get!</button>
+      </div>
+      
+      </form>
+      <div class="container" *ngIf="show" >
+  
+            <div class="row" >
+              <div class="col-md-4" *ngFor="let coup of _coupserv.coupons">
+                  <div class="card" style="width: 18rem;">
+                      <img class="card-img-top" src="{{coup.image}}" alt="Card image cap">
+                      <div class="card-body">
+                        <h5 class="card-title">Title: {{coup.title}}</h5>
+                      </div>
+                      <ul class="list-group list-group-flush">
+                        <li class="list-group-item" >Id: {{coup.id}}</li>
+                        <li class="list-group-item">Amount: {{coup.amount}}</li>
+                        <li class="list-group-item">End datend: {{coup.end_date}}</li>
+                      </ul>
+                      <div class="card-body">
+                        <a routerLink="/UpdateCouponComponent">Update coupon</a>
+                          
+                        <!-- <a href="#" class="card-link">Another link</a> -->
+                      </div>
+                    </div>
+              </div>
+
+            </div>
+          </div>
+        </div>
+    
+ 
+  
+

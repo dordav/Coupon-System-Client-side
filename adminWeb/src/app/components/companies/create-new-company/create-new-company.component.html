@@ -1,0 +1,28 @@
+<div class="container-fluid">
+    <h1> <span class="badge badge-secondary">Create a new company</span></h1>
+    <br>
+    <br>
+    <br>
+    <h4> <span class="badge badge-secondary">Please fill in the blanks rows</span></h4>
+<br>
+  <form>
+  
+    <div class="form-group col-md-6">
+      <label for="inputName">name</label>
+      <input type="text" class="form-control" id="inputName" [(ngModel)]="company.name" name="nametxt">
+    </div>
+    
+    <div class="form-group col-md-6">
+      <label for="inputPassword4">Password</label>
+      <input type="password" class="form-control" id="inputPassword4" [(ngModel)]="company.password" name="passtxt">
+    </div>
+              <div class="form-group col-md-6">
+                <label for="inputEmail4">Email</label>
+                <input type="email" class="form-control" id="inputEmail4" [(ngModel)]="company.email" name="emailtxt">
+              </div>
+              <br>
+              <br>
+              <br>
+    <button (click)="newComp()" class="btn btn-primary">Create</button>
+  </form>
+</div>

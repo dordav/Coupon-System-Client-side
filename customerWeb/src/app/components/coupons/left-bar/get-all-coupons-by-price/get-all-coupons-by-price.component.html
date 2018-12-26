@@ -1,0 +1,25 @@
+<form>
+  <div class="slidecontainer">
+    <label for="customRange3">Example range</label>
+    <input type="range" class="slider" min="0" max="9000" step="100" id="customRange3" [(ngModel)]="volume" value="5000" name="slide">
+    <div>
+      <span>0</span>
+      <span style="margin-left:70%">9000</span>
+    </div>
+  </div>
+</form>
+<br>
+<br>
+<form>
+  <div class="form-group col-md-6">
+    <label for="inputName">
+      <h5>Price: </h5>
+    </label>
+    <input type="number" ng-value="x" name="idnum"  placeholder="0" value="{{volume}}">
+  </div>
+  <br>
+  <br>
+  <div>
+    <button (click)="_coupserv.getcouponsbyprice(volume)" class="btn btn-primary">Get!</button>
+  </div>
+</form>

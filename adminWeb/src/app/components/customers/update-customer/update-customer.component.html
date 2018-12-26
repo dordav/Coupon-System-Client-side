@@ -1,0 +1,37 @@
+<div class="container-fluid">
+    <h1> <span class="badge badge-secondary">Get customer's details by ID, and than Update it.</span></h1>
+    <br>
+    <br>
+    <br>
+    <h4> <span class="badge badge-secondary">Please fill in the blank row</span></h4>
+    <br>
+    <form>
+      <div class="form-group col-md-6" >
+        <label for="inputName"><h5>id:</h5></label>
+        <input type="number" class="form-control" [(ngModel)]="customerid" name="idnum" [(ngModel)]="customer2.id" id="idn">
+      </div>
+      <div >
+          <!-- *ngIf="show" -->
+          <form *ngIf="show">
+              <fieldset >
+                <div class="form-group col-md-6" >
+                  <label for="disabledTextInput">name:</label>
+                  <input type="text" id="disabledTextInput" class="form-control" value="{{_custsrv.customer.name}}" name="nametxt" [(ngModel)]="customer2.name" disabled>
+                </div>
+                <div class="form-group col-md-6" >
+                    <label for="inputName">password:</label>
+                    <input type="text" class="form-control" value="{{_custsrv.customer.password}}" name="passtxt" [(ngModel)]="customer2.password">
+                  </div>
+
+  
+              </fieldset>
+            </form>
+          </div>
+      <br>
+      <br>
+      <button (click)="_custsrv.getcustomer(customerid); show=true;" class="btn btn-primary">Get!</button>&nbsp;&nbsp;&nbsp;&nbsp;
+      <button *ngIf="show" (click)="updatecust();" class="btn btn-primary">Update!</button>
+    </form>
+        <div>
+        
+        </div>

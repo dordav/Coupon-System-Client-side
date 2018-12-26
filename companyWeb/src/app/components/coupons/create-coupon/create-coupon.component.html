@@ -1,0 +1,52 @@
+<div class="container-fluid">
+  <h1> <span class="badge badge-secondary">Create a new coupon</span></h1>
+  <br>
+  <br>
+  <br>
+  <h4> <span class="badge badge-secondary">Please fill in the blanks rows</span></h4>
+<br>
+<form>
+
+  <div class="form-group col-md-6">
+    <label for="inputName">Title</label>
+    <input type="text" class="form-control" id="inputName" [(ngModel)]="coupon.title" name="titletxt">
+  </div>
+  
+  <div class="form-group col-md-6">
+    <label for="inputPassword4">Start date</label>
+    <input type="date" class="form-control" id="inputPassword4" [(ngModel)]="coupon.start_date" name="start_datetxt">
+  </div>
+  <div class="form-group col-md-6">
+    <label for="inputEmail4">End date</label>
+    <input type="date" class="form-control" id="inputEmail4" [(ngModel)]="coupon.end_date" name="end_datetxt">
+  </div>
+  <div class="form-group col-md-6">
+    <label for="inputEmail4">Amount</label>
+    <input type="number" class="form-control" id="inputEmail4" [(ngModel)]="coupon.amount" name="amounttxt">
+  </div>
+  <div class="form-group col-md-6">    
+      <label for="inputName">Type:</label>  
+    <select id="inputState" class="form-control" id="inputEmail4" [(ngModel)]="coupon.type" name="idnum">
+      <option>food</option>
+      <option>electricity</option>
+      <option>hobby</option>
+      <option>vacation</option>
+    </select>
+  </div>
+  <div class="form-group col-md-6">
+    <label for="inputEmail4">Massage</label>
+    <input type="text" class="form-control" id="inputEmail4" [(ngModel)]="coupon.massage" name="massagetxt">
+  </div>
+  <div class="form-group col-md-6">
+    <label for="inputEmail4">Price</label>
+    <input type="number" class="form-control" id="inputEmail4" [(ngModel)]="coupon.price" name="pricetxt">
+  </div>
+  <div class="form-group col-md-6">
+    <label for="inputEmail4">Image</label>
+    <input type="text" class="form-control" id="inputEmail4" [(ngModel)]="coupon.image" name="imagetxt">
+  </div>
+            <br>
+            <br>
+  <button (click)="newcoup()" class="btn btn-primary">Create</button>
+</form>
+</div>

@@ -1,0 +1,27 @@
+
+<div class="container" >
+    <br><br>
+            <div class="row" >
+              <div class="col-md-4" *ngFor='let comp of companies ; let i = index'>
+                  <div class="card" style="width: 18rem;">
+                      <div class="card-header">
+                          Company
+                        </div>
+                      <div class="card-body">
+                        <h5 class="card-title">Name: {{comp.name}}</h5>
+                      </div>
+                      <ul class="list-group list-group-flush">
+                        <li class="list-group-item" >Id: {{comp.id}}</li>
+                        <li class="list-group-item">Name: {{comp.name}}</li>
+                        <li class="list-group-item">Email: {{comp.email}}</li>
+                      </ul>
+                      <div class="card-body">
+                        <button (click)="gettoupdate(i)" type="button" class="btn btn-link">Update company</button>
+                          
+                        <!-- <a href="#" class="card-link">Another link</a> -->
+                      </div>
+                    </div><br><br><br>
+              </div>
+
+            </div>
+          </div>

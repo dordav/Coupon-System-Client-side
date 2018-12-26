@@ -1,0 +1,14 @@
+<form>
+  <div class="form">
+    <label for="inputName">
+      <h5>Date: </h5>
+    </label>
+    <br>
+    <input type="date" class="form" [(ngModel)]="coupdate" name="idnum">
+  </div>
+  <br>
+  <br>
+  <div>
+    <button (click)="_coupserv.getcouponsbydate(coupdate); show=true" class="btn btn-primary">Get!</button>
+  </div>
+</form>

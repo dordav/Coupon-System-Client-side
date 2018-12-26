@@ -1,0 +1,29 @@
+<div class="container">
+
+  <div class="row">
+    <div class="col-md-4" *ngFor="let coup of coupons ; let i = index">
+      <div class="card" style="width: 18rem;">
+        <img class="card-img-top" src="{{coup.image}}" alt="Card image cap">
+        <div class="card-body">
+          <h5 class="card-title">Title: {{coup.title}}</h5>
+        </div>
+        <ul class="list-group list-group-flush">
+          <li class="list-group-item">Id: {{coup.id}}</li>
+          <li class="list-group-item">Amount: {{coup.amount}}</li>
+          <li class="list-group-item">End datend: {{coup.end_date}}</li>
+        </ul>
+        <div class="card-body">
+          <!-- <a routerLink="/UpdateCouponComponent/">Update coupon</a> -->
+          <button (click)="gettoupdate(i)" type="button" class="btn btn-link">Update coupon</button>
+          <!-- <button (click)="gettogetcoup(i)" type="button" class="btn btn-link">Get all coupon's details</button> -->
+          <button (click)="gettoremove(i)" type="button" class="btn btn-link">Remove coupon</button>
+
+          <!-- <button (click)="gettoupdate()" class="btn btn-primary">Update</button> -->
+          <!-- <a href="#" class="card-link">Another link</a> -->
+        </div>
+      </div>
+      <br> <br>
+    </div>
+    
+  </div>
+</div>

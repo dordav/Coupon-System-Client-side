@@ -1,0 +1,36 @@
+
+    
+<div style="margin-left:25%">
+<h1>Shoopin Cart</h1>
+<br><br><br>
+        </div> 
+  <div  style="margin-left:20%"> 
+  <table class="table table-striped" style="width:75%">
+        <thead class="thead-dark">
+          <tr>
+            <th scope="col">#</th>
+            <th scope="col">Title</th>
+            <th scope="col">Amount</th>
+            <th scope="col">End date</th>
+            <th scope="col">price</th>
+            <th scope="col">Delete</th>            
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let coup of _coupserv.coupons2; let i = index;">
+            <th scope="row">{{i+1}}</th>
+            <td>{{coup.title}}</td>
+            <td>{{coup.amount}}</td>
+            <td>{{coup.end_date}}</td>
+            <td>{{coup.price}}</td>
+            <td><button (click)="_coupserv.deleteCoupon(i)">X</button></td>
+          </tr>
+          <br><br><br>
+          <div align="center">
+              <button (click)="_coupserv.purchase()" class="btn btn-success">Buy!</button>
+          </div>
+         </tbody>
+      </table>
+    </div> 
+
+ 

@@ -1,0 +1,29 @@
+
+<div class= "sticky-top p-3 mb-2 bg-white text-dark">
+<ul class="nav nav-tabs nav justify-content-center" id="myTab" role="tablist">
+  <li class="nav-item">
+    <a class="nav-link active" id="home-tab" data-toggle="tab" routerLink="GetCoupon" role="tab" aria-controls="home" aria-selected="true">Get coupon</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" id="profile-tab" data-toggle="tab" routerLink="CreateCoupon" role="tab" aria-controls="profile" aria-selected="false">Create coupon</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" id="contact-tab" data-toggle="tab" routerLink="UpdateCoupon" role="tab" aria-controls="contact" aria-selected="false">Update coupon</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" id="contact-tab" data-toggle="tab" routerLink="RemoveCoupons" role="tab" aria-controls="contact" aria-selected="false">Delete coupon</a>
+  </li>
+  <li class="nav-item dropdown">
+    <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Get coupons</a>
+    <div class="dropdown-menu">
+      <a class="dropdown-item" routerLink="GetAllCouponsByType">By type</a>
+      <a class="dropdown-item" routerLink="GetAllCouponsByPrice">By price</a>
+      <a class="dropdown-item" routerLink="GetAllCouponsByDate">By date</a>
+      <div class="dropdown-divider"></div>
+      <a class="dropdown-item" routerLink="GetAllCoupons">All coupons</a>
+    </div>
+  </li>
+</ul>
+
+
+</div>
